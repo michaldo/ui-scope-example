@@ -12,7 +12,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Sele {
+
+public class SeleTest {
 
 	@Test
 	public void test() {
