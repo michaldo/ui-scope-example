@@ -1,4 +1,4 @@
-package com.cybercom.vaadin.example;
+package com.cybercom.vaadin.example.account;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -8,7 +8,7 @@ import org.joda.time.LocalDate;
 import org.springframework.stereotype.Component;
 
 /**
- * Model class is pure business object and has no reference to any Web component. 
+ * This model class is pure business object and has no reference to any Web component. 
  */
 @Component
 public class AccountModel {

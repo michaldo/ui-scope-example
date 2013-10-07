@@ -1,4 +1,4 @@
-package com.cybercom.vaadin.example;
+package com.cybercom.vaadin.example.account;
 
 public class Account {
 	

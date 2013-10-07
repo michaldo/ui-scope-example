@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
+import com.vaadin.annotations.Push;
 import com.vaadin.annotations.Title;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
@@ -17,10 +18,11 @@ import com.vaadin.ui.UI;
  * UI class is not managed by Spring 
  */
 @Title("Simple bank")
+@Push
 public class SimpleBankUI extends UI
 {
 
-    @WebServlet(value = "/*")
+    @WebServlet(value = "/*", asyncSupported=true)
     @VaadinServletConfiguration(productionMode = false, ui = SimpleBankUI.class)
     public static class Servlet extends VaadinServlet {
     }

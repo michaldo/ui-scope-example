@@ -1,4 +1,4 @@
-package com.cybercom.vaadin.example;
+package com.cybercom.vaadin.example.account;
 
 import javax.annotation.PostConstruct;
 
@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import com.cybercom.vaadin.example.TopView;
 import com.vaadin.data.Property;
 import com.vaadin.data.Property.ValueChangeEvent;
 import com.vaadin.data.util.BeanItemContainer;
