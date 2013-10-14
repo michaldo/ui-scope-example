@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.cybercom</groupId>
+	<groupId>com.cybercom.demo</groupId>
 	<artifactId>ui-scope-example</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
@@ -52,21 +52,6 @@
 			<artifactId>vaadin-client-compiled</artifactId>
 			<version>${vaadin.version}</version>
 		</dependency>
-		<!--
-		  Needed when using the widgetset optimizer (custom ConnectorBundleLoaderFactory).
-		  
-		  For widgetset compilation, vaadin-client-compiler is automatically added on the
-		  compilation classpath by vaadin-maven-plugin so normally there is no need for an
-		  explicit dependency.
-		-->
-		<!--
-		<dependency>
-			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-client-compiler</artifactId>
-			<version>${vaadin.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		-->
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-client</artifactId>
@@ -101,7 +86,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.cybercom</groupId>
-			<artifactId>ui-scope</artifactId>
+			<artifactId>spring-ui-scope</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
@@ -173,9 +158,7 @@
 						<goals>
 							<goal>clean</goal>
 							<goal>resources</goal>
-							<goal>update-theme</goal>
 							<goal>update-widgetset</goal>
-							<goal>compile-theme</goal>
 							<goal>compile</goal>
 						</goals>
 					</execution>
@@ -210,8 +193,6 @@
 											<goal>resources</goal>
 											<goal>update-widgetset</goal>
 											<goal>compile</goal>
-											<goal>update-theme</goal>
-											<goal>compile-theme</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>

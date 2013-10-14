@@ -15,7 +15,7 @@ import com.vaadin.ui.Table;
 
 /**
  * Never define View bean as Spring Proxy. 
- * That means circular dependency between 2 views is not possible 
+ * That means circular dependency between 2 views is not possible with scope UI
  */
 @Component
 @Scope(value = "ui")
